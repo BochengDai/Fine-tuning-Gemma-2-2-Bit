@@ -29,14 +29,14 @@ We use Hugging Face's `Gemma2ForSequenceClassification` with:
 
 ## 📊 Results
 
-| Model Configuration                                | Accuracy | Log Loss |
-|----------------------------------------------------|----------|----------|
-| **LoRA + TTA (Best)**                              | **49.22%** | **1.0373** |
-| LoRA + TTA + PISSA Initialization                  | 47.26%   | 1.0522   |
-| LoRA only (no TTA, with PISSA)                     | 43.41%   | 1.0715   |
-| Single-layer scoring head                          | 31.29%   | 1.2574   |
-| XGBoost Benchmark                                  | 46.29%   | 1.0582   |
-| Pretrained Gemma-2 (no tuning)                     | 29.78%   | 3.0237   |
+| Model Configuration                                     | Accuracy | Log Loss |
+|---------------------------------------------------------|----------|----------|
+| **✅ LoRA + TTA + 3-Layer Scoring Head (Best)**         | **49.22%** | **1.0373** |
+| LoRA + TTA + 3-Layer Scoring Head + PISSA Initialization| 47.26%   | 1.0522   |
+| LoRA only + 3-Layer Scoring Head + PISSA Initialization | 43.41%   | 1.0715   |
+| LoRA + TTA + **Single-Layer** Scoring Head              | 31.29%   | 1.2574   |
+| XGBoost Benchmark (Feature-based Baseline)              | 46.29%   | 1.0582   |
+| Pretrained Gemma-2 (No Fine-Tuning)                     | 29.78%   | 3.0237   |
 
 ---
 
